@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: surgery-dashboard
+    env: python
+    region: oregon
+    plan: free
+    numInstances: 1
+
+    # Build and start commands
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run surgery_dashboard.py --server.port=$PORT --server.address=0.0.0.0"
+
+    # Environment variables
+    envVars:
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+      - key: STREAMLIT_SERVER_PORT
+        value: "10000"
+      - key: STREAMLIT_LOGGER_LEVEL
+        value: "info"
+      - key: PORT
+        value: "10000"
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false
+
+    # Keep instance alive
+    maxShutdownDelay: 30
