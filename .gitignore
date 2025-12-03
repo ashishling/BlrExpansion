@@ -51,6 +51,16 @@ Thumbs.db
 # pyenv
 .python-version
 
+# Temporary/Internal files (not for deployment)
+BlrSurgeryOnly.csv
+comprehensive_search_output.log
+HOSPITAL_SEARCH_SUMMARY.md
+QUICKSTART_EYE_HOSPITALS.md
+QUICK_REFERENCE.md
+IMPLEMENTATION_COMPLETE.txt
+eye_hospital_dashboard.py
+eye_hospitals_bangalore.csv
+
 # Data files (optional - uncomment if you don't want to commit large data files)
 # *.csv
 # *.xlsx
